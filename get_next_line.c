@@ -6,8 +6,15 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 21:08:24 by ingrid            #+#    #+#             */
-/*   Updated: 2025/08/08 21:08:35 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/08/08 21:39:14 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*get_next_line(int fd);
+#include "get_next_line.h"
+
+char	*get_next_line(int fd)
+{
+	static char	*buffer;
+
+	buffer = NULL;
+}
