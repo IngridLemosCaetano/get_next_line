@@ -6,7 +6,7 @@
 #    By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/08 21:11:58 by ingrid            #+#    #+#              #
-#    Updated: 2025/08/08 21:28:26 by ingrid           ###   ########.fr        #
+#    Updated: 2025/08/30 18:26:53 by ingrid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,3 +38,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean clean
+
+.PHONY: all clean fclean re
