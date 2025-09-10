@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 21:08:51 by ingrid            #+#    #+#             */
-/*   Updated: 2025/09/08 15:36:21 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/09/10 11:59:59 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	if (!s)
-		return (ft_strdup(""));
+		return (NULL);
 	size = ft_strlen(s);
 	dest = (char *)malloc(sizeof(char) * (size + 1));
 	if (dest == NULL)
@@ -113,12 +113,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-// int	main(void)
-// {
-// 	char	*s1 = "Bom Dia! ";
-// 	unsigned int start = 10;
-// 	size_t len = 4;
-// 	printf("%s\n", ft_substr(s1, start, len));
-// 	return (0);
-// }

@@ -1,7 +1,4 @@
-hello\nworld\n
-Bom Dia!
-Segunda Linha.
-Iris Caetano
+Name: Amora
+Age: 13
 
-Blá line 6
-
+City: São Paulo
