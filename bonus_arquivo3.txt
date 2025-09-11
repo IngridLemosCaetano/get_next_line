@@ -1,4 +1,3 @@
 Primeira linha arquivo 3
 Segunda linha arquivo 3
 Terceira linha arquivo 3
-Quarta linha arquivo 3

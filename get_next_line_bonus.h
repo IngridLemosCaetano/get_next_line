@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 09:59:49 by ingrid            #+#    #+#             */
-/*   Updated: 2025/09/11 10:28:56 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/09/11 15:39:02 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,14 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# define MAX_FD 1024
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
 
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
 # include <stdio.h>
-
-typedef struct s_fd_list
-{
-	int					fd;
-	char				*rest;
-	struct s_fd_list	*next;
-}	t_fd_list;
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);

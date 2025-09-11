@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilemos-c <ilemos-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 09:59:39 by ingrid            #+#    #+#             */
-/*   Updated: 2025/09/11 11:26:07 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/09/11 15:55:39 by ilemos-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,26 +84,25 @@ char	*get_next_line(int fd)
 {
 	static char	*rest[MAX_FD];
 	char		*line;
-	t_fd_list	fd;
 
 	if (fd < 0 || fd >= MAX_FD || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!rest)
+	if (!rest[fd])
 	{
-		rest = ft_strdup("");
-		if (!rest)
+		rest[fd] = ft_strdup("");
+		if (!rest[fd])
 			return (NULL);
 	}
-	rest = ft_read_file_bonus(fd, rest);
-	if (!rest)
+	rest[fd] = ft_read_file_bonus(fd, rest[fd]);
+	if (!rest[fd])
 		return (NULL);
-	if (rest[0] == '\0')
+	if (rest[fd][0] == '\0')
 	{
-		free(rest);
-		rest = NULL;
+		free(rest[fd]);
+		rest[fd] = NULL;
 		return (NULL);
 	}
-	line = ft_line_bonus(rest);
-	rest = ft_new_rest_bonus(rest);
+	line = ft_line_bonus(rest[fd]);
+	rest[fd] = ft_new_rest_bonus(rest[fd]);
 	return (line);
 }
