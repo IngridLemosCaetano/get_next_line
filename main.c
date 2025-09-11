@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 11:55:20 by ingrid            #+#    #+#             */
-/*   Updated: 2025/09/10 12:58:17 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/09/11 10:24:31 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,20 +60,20 @@
 // 	return (0);
 // }
 
-int	main(void)
-{
-	int		fd;
-	char	*line;
-	int		i;
+// int	main(void)
+// {
+// 	int		fd;
+// 	char	*line;
+// 	int		i;
 
-	fd = open("text.txt", O_RDONLY);
-	i = 1;
-	while ((line = get_next_line(fd)) != NULL)
-	{
-		printf("line%d: %s", i, line);
-		free(line);
-		i++;
-	}
-	close(fd);
-	return (0);
-}
+// 	fd = open("text.txt", O_RDONLY);
+// 	i = 1;
+// 	while ((line = get_next_line(fd)) != NULL)
+// 	{
+// 		printf("line%d: %s", i, line);
+// 		free(line);
+// 		i++;
+// 	}
+// 	close(fd);
+// 	return (0);
+// }
