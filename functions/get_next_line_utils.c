@@ -6,7 +6,7 @@
 /*   By: ingrid <ingrid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 21:08:51 by ingrid            #+#    #+#             */
-/*   Updated: 2025/09/10 11:59:59 by ingrid           ###   ########.fr       */
+/*   Updated: 2025/10/07 11:52:37 by ingrid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (0);
 	while (s[i])
 		i++;
 	return (i);
@@ -30,8 +28,6 @@ char	*ft_strdup(const char *s)
 	char	*dest;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
 	size = ft_strlen(s);
 	dest = (char *)malloc(sizeof(char) * (size + 1));
 	if (dest == NULL)
